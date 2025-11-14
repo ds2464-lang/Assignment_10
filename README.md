@@ -1,3 +1,7 @@
+Project Overview:
+
+This project implements a secure user management system built with FastAPI, SQLAlchemy, and PostgreSQL. It includes a fully tested backend with unit tests, integration tests, and an automated CI/CD pipeline using GitHub Actions. The application is containerized with Docker and automatically built, scanned, and deployed to Docker Hub. The project demonstrates secure password hashing, data validation, and modern DevOps practices.
+
 How to run tests locally:
 
 python -m venv venv
