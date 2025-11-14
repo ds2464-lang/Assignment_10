@@ -79,7 +79,10 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
-  
+
+      - name: Print Trivy Report
+        run: cat trivy_envs.txt
+
   deploy:
     needs: security
     if: github.ref == 'refs/heads/main'
