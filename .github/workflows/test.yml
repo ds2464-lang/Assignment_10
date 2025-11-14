@@ -70,6 +70,9 @@ jobs:
       
       - name: Build image
         run: docker build -t app:test .
+
+      - name: Print Trivy Report
+        run: cat trivy_envs.txt
       
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
@@ -79,9 +82,6 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
-
-      - name: Print Trivy Report
-        run: cat trivy_envs.txt
 
   deploy:
     needs: security
